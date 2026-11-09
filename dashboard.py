@@ -9,36 +9,42 @@ st.set_page_config(
     layout="wide"
 )
 
+
+
 # ---------------- CUSTOM DESIGN ----------------
 st.markdown("""
 <style>
+
+/* Dashboard Background */
 .stApp {
-    background-color: #f3f6fb;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
-h1 {
-    color: #17365d;
+/* All Headings */
+h1, h2, h3 {
+    color: var(--text-color) !important;
     font-weight: 800;
 }
 
-h2, h3 {
-    color: #23476b;
-}
-
+/* Metric Cards */
 div[data-testid="stMetric"] {
-    background-color: white;
+    background-color: var(--secondary-background-color);
     padding: 20px;
     border-radius: 12px;
-    border: 1px solid #dce5f0;
+    border: 1px solid rgba(128, 128, 128, 0.4);
     box-shadow: 0 3px 10px rgba(0,0,0,0.05);
 }
 
-div[data-testid="stMetricLabel"] {
-    color: #52677e;
+/* Metric Labels */
+div[data-testid="stMetricLabel"],
+div[data-testid="stMetricLabel"] p {
+    color: var(--text-color) !important;
 }
 
+/* Metric Values */
 div[data-testid="stMetricValue"] {
-    color: #1769aa;
+    color: var(--primary-color) !important;
     font-weight: bold;
 }
 
